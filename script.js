@@ -118,7 +118,17 @@ function buildPlaylist() {
      3. Write an if / else if that assigns `songs` based on
         the mode
      ===================================================== */
+    const songMode = modeSelector.value;
+    const songs = allSongs;
 
+    console.log("Mode selected: ", songMode);
+    if(songMode == "quickPlay"){
+      songs = allSongs.slice(0, 2);
+    }else if(songMode =="fullSession"){
+      songs = allSongs;
+    } 
+
+    console.log(songs);
 
 
   /* =====================================================
